@@ -11,3 +11,5 @@ spec:
     singular: puffin
   scope: Namespaced
   version: v1alpha1
+status:
+  status: status

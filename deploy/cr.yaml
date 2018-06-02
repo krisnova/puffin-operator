@@ -1,4 +1,5 @@
 apiVersion: "kubernetes.is/v1alpha1"
 kind: "Puffin"
 metadata:
-  name: "example"
+  name: "chad"
+asdfasdfasdfasdf

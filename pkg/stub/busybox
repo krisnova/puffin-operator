@@ -1,0 +1,33 @@
+//// newbusyBoxPod demonstrates how to create a busybox pod
+//func newbusyBoxPod(cr *v1alpha1.Puffin) *v1.Pod {
+//	labels := map[string]string{
+//		"app": "busy-box",
+//	}
+//	return &v1.Pod{
+//		TypeMeta: metav1.TypeMeta{
+//			Kind:       "Pod",
+//			APIVersion: "v1",
+//		},
+//		ObjectMeta: metav1.ObjectMeta{
+//			Name:      "busy-box",
+//			Namespace: cr.Namespace,
+//			OwnerReferences: []metav1.OwnerReference{
+//				*metav1.NewControllerRef(cr, schema.GroupVersionKind{
+//					Group:   v1alpha1.SchemeGroupVersion.Group,
+//					Version: v1alpha1.SchemeGroupVersion.Version,
+//					Kind:    "Puffin",
+//				}),
+//			},
+//			Labels: labels,
+//		},
+//		Spec: v1.PodSpec{
+//			Containers: []v1.Container{
+//				{
+//					Name:    "busybox",
+//					Image:   "busybox",
+//					Command: []string{"sleep", "3600"},
+//				},
+//			},
+//		},
+//	}
+//}

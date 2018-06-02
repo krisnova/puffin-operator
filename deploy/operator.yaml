@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: puffin-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: puffin-operator
+  template:
+    metadata:
+      labels:
+        name: puffin-operator
+    spec:
+      containers:
+        - name: puffin-operator
+          image: krisnova/puffinoperator:latest
+          command:
+          - puffin-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
