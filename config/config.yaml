@@ -1,0 +1,3 @@
+apiVersion: kubernetes.is/v1alpha1
+kind: Puffin
+projectName: puffin-operator
